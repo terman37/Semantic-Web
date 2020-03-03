@@ -12,7 +12,7 @@
  
    
 <Person rdf:ID="John">
-  <name>John</name>
+  <name xml:lang="en">John</name>
 	<shoesize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</shoesize>
 	<age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</age>
 </Person>
