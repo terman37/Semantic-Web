@@ -1,0 +1,36 @@
+prefix h: <http://www.inria.fr/2007/09/11/humans.rdfs#>
+
+select * where { ?x a ?t . filter(strstarts(?t, h:)) }
+
+select * where {
+  	<http://www.inria.fr/2007/09/11/humans.rdfs-instances#John> ?p ?v
+}
+
+DESCRIBE <http://www.inria.fr/2007/09/11/humans.rdfs-instances#John> 
+
+select * where {
+  	?x h:shoesize ?y
+}
+
+select * where {
+  ?x a h:Person . OPTIONAL { ?x h:shoesize ?y}
+}
+
+select * where {
+  ?x a h:Person . OPTIONAL { ?x h:shoesize ?y; h:shirtsize ?z} filter (?y > 8 || ?z > 12)
+}
+
+select distinct ?x where {
+  ?x h:hasChild ?y
+}
+
+SELECT distinct ?x
+WHERE {
+	?x a h:Person
+	minus { ?x h:hasChild ?v}
+}
+
+SELECT *
+WHERE {
+	?x h:age?v
+}
