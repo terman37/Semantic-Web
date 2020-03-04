@@ -104,3 +104,53 @@
     :shirtsize 12 ;
     :shoesize 14 ;
     :trouserssize 44 .
+	
+<http://www.inria.fr/2007/09/11/humans.rdfs-instances#Anthony> a :Man ;
+    :age 40 ;
+    :name "Anthony" ;
+	:family "myfamily";
+	:hasChild <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Jonathan> ;
+	:hasChild <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Nolann> ;
+    :hasSpouse <http://www.inria.fr/2007/09/11/humans.rdfs-instances#MarieJo> ;
+    :shirtsize "M" ;
+    :shoesize 42 ;
+    :trouserssize 40 .
+	
+<http://www.inria.fr/2007/09/11/humans.rdfs-instances#MarieJo> a :Woman ;
+    :age 40 ;
+    :name "MarieJo" ;
+	:hasChild <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Jonathan> ;
+	:hasChild <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Nolann> ;
+    :hasSpouse <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Anthony> ;
+    :shirtsize "S" ;
+    :shoesize 38 ;
+	:family "myfamily";
+    :trouserssize 38 .
+	
+<http://www.inria.fr/2007/09/11/humans.rdfs-instances#Jonathan> a :Man ;
+    :age 9 ;
+    :name "Jonathan" ;
+	:hasParent <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Anthony> ;
+	:hasParent <http://www.inria.fr/2007/09/11/humans.rdfs-instances#MarieJo> ;
+	:hasBrother <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Nolann> ;
+    :shirtsize "XS" ;
+	:family "myfamily";
+    :shoesize 35 ;
+    :trouserssize 10 .
+
+<http://www.inria.fr/2007/09/11/humans.rdfs-instances#Nolann> a :Man ;
+    :age 7 ;
+	:family "myfamily";
+    :name "Nolann" ;
+	:hasParent <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Anthony> ;
+	:hasParent <http://www.inria.fr/2007/09/11/humans.rdfs-instances#MarieJo> ;
+	:hasBrother <http://www.inria.fr/2007/09/11/humans.rdfs-instances#Jonathan> ;
+    :shirtsize "XXS" ;
+    :shoesize 31 ;
+    :trouserssize 8 .
+
+
+
+
+
+
