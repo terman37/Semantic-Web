@@ -1,0 +1,28 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.unice.fr/voc#> .
+
+:Woman a rdfs:Class ;
+	rdfs:subClassOf :Human .
+:Man a rdfs:Class ;
+	rdfs:subClassOf :Human .
+
+:FamilyMember a rdfs:Class .
+
+:Engineer a rdfs:Class .
+:age a rdf:Property .	
+:Shoesize a rdf:Property .	
+:Trousersize a rdf:Property .	
+:name a rdf:Property .
+:hasColleague a rdf:Property .	
+:hasFather a rdf:Property .	
+
+:hasChild a rdf:Property ;
+	rdfs:subPropertyOf :familyLink .
+:hasSpouse a rdf:Property ;
+	rdfs:subPropertyOf :familyLink .
+	
+:familyLink a rdf:Property ;
+	rdfs:domain :FamilyMember ;
+	rdfs:range :FamilyMember .
